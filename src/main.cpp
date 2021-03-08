@@ -1,9 +1,18 @@
+
 #include <Arduino.h>
 
-void setup() {
-  // put your setup code here, to run once:
+#include "ROS/ros_deps.h"
+#include "devices/devices.h"
+
+void setup() 
+{
+  initROSDependencies();
+  initializeThrusters();
+  initializePressureSensor();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop() 
+{
+  publishCurrentDepth();
+  runROSDependencies();
 }
