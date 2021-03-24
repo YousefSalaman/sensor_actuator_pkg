@@ -16,6 +16,8 @@ void initROSDependencies(void)
 
     // Declare subscribers
     nh.subscribe(mov_motor_sub);
+    nh.subscribe(camera_angle_sub);
+    nh.subscribe(gripper_mode_sub);
 }
 
 

@@ -33,9 +33,9 @@ void initializeThrusters(void)
 }
 
 // Setter for the thruster motor PWM values
-void setThrusterSpeeds(const MotorValues &motor_msg)
+void setThrusterSpeeds(const MotorValues& motor_msg)
 { 
     if(init_motors)
         for (uint8_t i = 0; i < MOTOR_NUM; i++)
-            motors[i].writeMicroseconds(motor_msg.motor_values[i]); // This can be done if I send an array instead of individual numbers
+            motors[i].writeMicroseconds(motor_msg.motor_values[i]);
 }

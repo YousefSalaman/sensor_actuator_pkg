@@ -6,8 +6,10 @@
 
 void setup() 
 {
+  initializeGripper();
   initROSDependencies();
   initializeThrusters();
+  initializeCameraServo();
   initializePressureSensor();
 }
 
